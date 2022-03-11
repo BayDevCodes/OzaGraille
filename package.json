@@ -2,21 +2,25 @@
   "name": "ozagraille",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BayDevOff/OzaGraille.git"
   },
-  "authors": ["BayDev", "Zowks_vi"],
+  "authors": [
+    "BayDev",
+    "Zowks_vi"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BayDevOff/OzaGraille/issues"
   },
   "homepage": "https://github.com/BayDevOff/OzaGraille#readme",
   "dependencies": {
+    "dotenv": "latest",
     "instagram-private-api": "latest",
     "re2": "latest"
   }
