@@ -23,6 +23,7 @@
     "dotenv": "latest",
     "instagram-private-api": "latest",
     "node-html-to-image": "latest",
+    "pdf-parse": "latest",
     "re2": "latest"
   }
 }
