@@ -7,3 +7,4 @@
   
 ### Pourrait être stylé:
   - Pouvoir choisir d'être notifié dans les story sur certain jour (configurable en DM)
+  - Localisation sur les posts
