@@ -22,6 +22,7 @@
   "dependencies": {
     "dotenv": "latest",
     "instagram-private-api": "latest",
+    "node-html-to-image": "^3.2.4",
     "re2": "latest"
   }
 }
