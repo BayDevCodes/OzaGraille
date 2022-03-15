@@ -52,5 +52,23 @@ module.exports = {
             toBesties: undefined,
             viewMode: undefined
         });
+    },
+
+    /**
+     * Returns the current time.
+     * @param {Number} timezone offset from the UTC time zone
+     * @returns {any} The current day of the week and time
+     */
+    time: (timezone) => {
+        let timestamp = ~~(Date.now() / 1000 + timezone * 3600); // seconds since epoch
+        const day = ~~(timestamp / 86400 + 3) % 7; // day of the week
+
+        timestamp %= 86400; // seconds since midnight
+        const hours = ~~(timestamp / 3600);
+
+        timestamp %= 3600;
+        const minutes = ~~(timestamp / 60);
+
+        return { "d": day, "h": hours, "m": minutes };
     }
 };
