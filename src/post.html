@@ -17,17 +17,95 @@
         }
 
         .insta-box img {
+            z-index: -100;
             position: absolute;
             width: 1080px;
             filter: blur(10px);
         }
 
-        .insta-box div {
-            width: 1080px;
-            height: 1080px;
+        .content {
+            max-width: 1080px;
+            max-height: 1080px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .day {
+            height: 250px;
+            align-items: center;
+        }
+
+        .food {
+            width: 900px;
+            margin-top: 50px;
+            height: 700px;
+            border-radius: 20px;
+            backdrop-filter: blur(100px);
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .du-jour {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            height: 400px;
+        }
+
+        .du-jour div {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            min-width: 32.9%;
+            width: max-content;
+            height: 400px;
+            border: solid rgba(0, 0, 0, 0.2) 2px;
+        }
+
+        .plat-du-jour {
+            border-top-left-radius: 20px;
+            background-color: rgb(255, 165, 0, 0.2);
+        }
+
+        .plat-du-jour .title {
+            border-top-left-radius: 18px;
+        }
+
+        .envie-du-jour {
+            background-color: rgb(255, 0, 0, 0.2);
+        }
+
+        .peche-du-jour {
+            border-top-right-radius: 20px;
+            background-color: rgb(0, 128, 0, 0.2);
+        }
+
+        .peche-du-jour .title {
+            border-top-right-radius: 18px;
+        }
+
+        .du-jour div .title {
+            width: 100%;
+            height: 100px;
+            border: transparent;
+            background-color: rgba(0, 0, 0, 0.2);
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-family: 'Nunito', sans-serif;
+            color: rgb(255, 255, 255, 0.8);
+            text-align: center;
         }
 
         .css-3d-text {
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 12px;
+            border-radius: 20px;
+            backdrop-filter: blur(100px);
+            background-color: rgba(0, 0, 0, 0.4);
             font-size: 100px;
             color: #70a846;
             font-family: "Arial Black", Gadget, sans-serif;
@@ -49,8 +127,26 @@
 <body style="margin: 0; padding: 0;">
     <div class="insta-box">
         <img src="./assets/pp_background.jpg">
-        <div>
+        <div class="content">
+            <div class="day">
+                <p class="css-3d-text">MERCREDI</p>
+            </div>
+            <div class="food">
+                <div class="du-jour">
+                    <div class="plat-du-jour">
+                        <div class="title">PLAT DU JOUR</div>
+                    </div>
+                    <div class="envie-du-jour">
+                        <div class="title">ENVIE DU JOUR</div>
+                    </div>
+                    <div class="peche-du-jour">
+                        <div class="title">PÊCHE DU JOUR</div>
+                    </div>
+                </div>
+                <div class="accompagnements">
 
+                </div>
+            </div>
         </div>
     </div>
 </body>
