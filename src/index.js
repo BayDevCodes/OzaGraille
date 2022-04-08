@@ -41,7 +41,7 @@ const { IgApiClient } = require('instagram-private-api');
 const { withFbnsAndRealtime } = require('instagram_mqtt');
 const fs = require('fs');
 const checkFollow = require('./modules/checkFollow');
-const agent = require('./Agent');
+const openai = require('./openai');
 
 (async () => {
     const ig = withFbnsAndRealtime(new IgApiClient());
@@ -57,14 +57,9 @@ const agent = require('./Agent');
                 };
             });
 
-
             if (notif.collapseKey == "new_follower") {
                 checkFollow();
             };
-
-            // if (notif.collapseKey == "direct_v2_message" && notif.pushCategory == "direct_v2_pending") {
-            //     directPending();
-            // };
         });
         ig.fbns.connect();
 
@@ -83,7 +78,7 @@ const agent = require('./Agent');
                 };
 
                 
-                const result = JSON.parse(await agent(message)+"\"]");
+                const result = JSON.parse(await openai(message)+"\"]");
                 console.log(result[0]);
                 (await ig.feed.directInbox().records()).forEach(thread => {
                     if (thread.threadId == message.message.thread_id) {
