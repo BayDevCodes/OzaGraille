@@ -4,7 +4,7 @@ module.exports = async (message) => {
     const { Configuration, OpenAIApi } = require("openai");
 
     const configuration = new Configuration({
-        apiKey: config.token,
+        apiKey: process.env.OAI_TOKEN,
     });
     const openai = new OpenAIApi(configuration);
 
