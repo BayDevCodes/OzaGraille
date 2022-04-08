@@ -10,3 +10,4 @@
   - Localisation sur les posts
   - Note des élèves sur le repas du jour (basé sur des sondages précédent)
   - Changer le background des posts en fonction de la saison
+  - Follow back les personnes qui follow le compte

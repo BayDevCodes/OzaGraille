@@ -1,9 +1,18 @@
 const { readFileSync } = require('fs');
 const { IgApiClient } = require('instagram-private-api');
+const { withRealtime, withFbns, withFbnsAndRealtime } = require('instagram_mqtt');
+const { DirectRepository } = require('instagram-private-api/dist/repositories/direct.repository');
 
-const ig = new IgApiClient();
+const ig = withFbns(new IgApiClient());
 
 module.exports = {
+    test: async () => {
+        ig.fbns.on('direct', content => {
+            console.log(content);
+        });
+    },
+
+
     /** Logs into the Instagram account. */
     login: async () => {
         ig.state.generateDevice(process.env.IG_USERNAME);
@@ -25,7 +34,7 @@ module.exports = {
             usertags: undefined
         });
     },
-    
+
     /**
      * Publishes a new story on the account.
      * @param

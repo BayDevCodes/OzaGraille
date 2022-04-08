@@ -12,7 +12,7 @@
   },
   "authors": [
     "BayDev",
-    "Zowks_VI"
+    "Zowks-VI"
   ],
   "license": "ISC",
   "bugs": {
@@ -21,9 +21,10 @@
   "homepage": "https://github.com/BayDevOff/OzaGraille#readme",
   "dependencies": {
     "dotenv": "latest",
-    "instagram-private-api": "latest",
+    "instagram_mqtt": "^1.2.2",
+    "instagram-private-api": "^1.45.3",
     "node-html-to-image": "latest",
-    "pdf-parse": "latest",
+    "openai": "^2.0.5",
     "re2": "latest"
   }
 }

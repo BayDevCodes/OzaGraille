@@ -8,7 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Nunito&display=swap" rel="stylesheet">
     <style>
+        body {
+            background-color: black;
+        }
+
         .insta-box {
             margin: 0;
             padding: 0;
@@ -38,7 +45,7 @@
         }
 
         .food {
-            width: 900px;
+            width: 1000px;
             margin-top: 50px;
             height: 700px;
             border-radius: 20px;
@@ -57,6 +64,8 @@
         .du-jour div {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             max-width: 100%;
             min-width: 32.9%;
             width: max-content;
@@ -93,10 +102,66 @@
             background-color: rgba(0, 0, 0, 0.2);
             justify-content: center;
             align-items: center;
-            font-size: 30px;
-            font-family: 'Nunito', sans-serif;
+            font-size: 40px;
+            font-weight: 500;
+            font-family: 'Exo 2', sans-serif;
             color: rgb(255, 255, 255, 0.8);
             text-align: center;
+        }
+
+        .du-jour div .content {
+            border: transparent;
+            color: lightgray;
+            font-size: 30px;
+            font-family: 'Nunito', sans-serif;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 90%;
+            height: 300px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .du-jour div .content .emoji {
+            margin: 0;
+            padding: 0;
+            font-size: 100px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .accompagnements {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            height: 296px;
+        }
+
+        .accompagnements div {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: lightgray;
+            font-family: 'Nunito', sans-serif;
+            font-size: 30px;
+        }
+
+        .accompagnements div .emoji {
+            padding: 0;
+            margin: 0;
+            font-size: 60px;
         }
 
         .css-3d-text {
@@ -135,16 +200,35 @@
                 <div class="du-jour">
                     <div class="plat-du-jour">
                         <div class="title">PLAT DU JOUR</div>
+                        <div class="content">
+                            <p>STEAK DE VEAU A L'ECHALOTE</p>
+                            <p class="emoji">🥩</p>
+                        </div>
                     </div>
                     <div class="envie-du-jour">
                         <div class="title">ENVIE DU JOUR</div>
+                        <div class="content">
+                            <p>ECHINE DE PORC CONFITE</p>
+                            <p class="emoji">🐷</p>
+                        </div>
                     </div>
                     <div class="peche-du-jour">
                         <div class="title">PÊCHE DU JOUR</div>
+                        <div class="content">
+                            <p>FILET DE PERCHE A LA CREME</p>
+                            <p class="emoji">🐟</p>
+                        </div>
                     </div>
                 </div>
                 <div class="accompagnements">
-
+                    <div>
+                        <p>• BLE AU CUMIN</p>
+                        <p class="emoji">🌾</p>
+                    </div>
+                    <div>
+                        <p>• BRUNOISE DE LEGUMES</p>
+                        <p class="emoji">🥗</p>
+                    </div>
                 </div>
             </div>
         </div>
