@@ -2,9 +2,10 @@
   "name": "ozagraille",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "render": "node ./src/modules/scrape.js"
   },
   "repository": {
     "type": "git",
@@ -20,11 +21,12 @@
   },
   "homepage": "https://github.com/BayDevOff/OzaGraille#readme",
   "dependencies": {
+    "@tensorflow/tfjs": "^3.17.0",
+    "@vtfk/pdf-text-reader": "^1.1.2",
     "dotenv": "latest",
     "instagram_mqtt": "^1.2.2",
     "instagram-private-api": "^1.45.3",
     "node-html-to-image": "latest",
-    "openai": "^2.0.5",
     "re2": "latest"
   }
 }

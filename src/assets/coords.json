@@ -1,0 +1,52 @@
+{
+    "days": {
+        "lundi": {
+            "max": 240,
+            "min": 190
+        },
+        "mardi": {
+            "max": 360,
+            "min": 310
+        },
+        "mercredi": {
+            "max": 480,
+            "min": 430
+        },
+        "jeudi": {
+            "max": 650,
+            "min": 550
+        },
+        "vendredi": {
+            "max": 730,
+            "min": 670
+        }    
+
+    },
+
+    "contents": {
+        "date": {
+            "max": 375,
+            "min": 355
+        },
+        "plat": {
+            "max": 280,
+            "min": 245
+        },
+        "envie": {
+            "max": 240,
+            "min": 210
+        },
+        "peche": {
+            "max": 200,
+            "min": 175
+        },
+        "premier": {
+            "max": 160,
+            "min": 140
+        },
+        "second": {
+            "max": 130,
+            "min": 100
+        }
+    }
+}

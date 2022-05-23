@@ -1,0 +1,274 @@
+{
+  "1": {
+    "lundi": {
+      "date": "4/ 25 /2022",
+      "plat": "STEAK HACHE SAUCE BRUNE",
+      "envie": "TARTE 3 FROMAGES",
+      "peche": "FILET DE COLIN AUX HERBES",
+      "premier": "FRITES",
+      "second": "BROCOLI"
+    },
+    "mardi": {
+      "date": "4/ 26 /2022",
+      "plat": "FILET DE POULET SAUCE CURRY",
+      "envie": "CHILI CON CARNE",
+      "peche": "DOS DE LIEU",
+      "second": "POELEE MEXICAINE"
+    },
+    "mercredi": {
+      "date": "4/ 27 /2022",
+      "plat": "BOULETTES D'AGNEAU AU ROMARIN",
+      "envie": "PILON TEX MEX",
+      "peche": "PAVE DE POISSON",
+      "premier": "POMMES DE TERRE",
+      "second": "FLAGEOLET AUX CAROTTES"
+    },
+    "jeudi": {
+      "date": "4/ 28 /2022",
+      "plat": "SAUTE DE DINDE AUX CHAMPIGNONS",
+      "envie": "CORDON BLEU",
+      "peche": "CROUSTADE DE POISSON",
+      "premier": "TORTIS",
+      "second": "POELEE CAMPAGNARDE"
+    },
+    "vendredi": {
+      "date": "4/ 29 /2022",
+      "plat": "CORDON BLEU",
+      "envie": "TARTIFLETTE",
+      "peche": "MAREE DU JOUR",
+      "premier": "GRATIN DE POMMES DE TERRE",
+      "second": "SALADE"
+    }
+  },
+  "2": {
+    "lundi": {
+      "date": "5/ 02 /2022",
+      "plat": "NORMANDIN DE VEAU SAUCE CHAMPIGNON",
+      "envie": "CREPE AU FROMAGE",
+      "peche": "DOS DE COLIN SAUCE BEARNAISE",
+      "premier": "POMMES DE TERRE SAUTEES",
+      "second": "HARICOTS VERTS"
+    },
+    "mardi": {
+      "date": "5/ 03 /2022",
+      "plat": "SAUTE DE BOEUF AUX OIGNONS",
+      "envie": "QUICHE LORRAINE",
+      "peche": "FILET DE SAUMON",
+      "premier": "TORTIS",
+      "second": "CAROTTES"
+    },
+    "mercredi": {
+      "date": "5/ 04 /2022",
+      "plat": "COLOMBO DE VOLAILLE",
+      "envie": "FRICADELLE",
+      "peche": "FILET DE PERCHE",
+      "premier": "FRITES",
+      "second": "BROCOLI"
+    },
+    "jeudi": {
+      "date": "5/ 05 /2022",
+      "plat": "SAUTE DE PORC A LA PROVENCAL",
+      "envie": "NUGGETS",
+      "peche": "PAUPIETTE DE POISSON",
+      "premier": "COEUR DE BLE",
+      "second": "RATATOUILLE"
+    },
+    "vendredi": {
+      "date": "5/ 06 /2022",
+      "plat": "POITRINE DE VEAU FARCIE",
+      "envie": "BOULETTE DE BOEUF",
+      "peche": "MAREE FRAICHE",
+      "premier": "RIZ",
+      "second": "JULIENNE DE LEGUMES"
+    }
+  },
+  "3": {
+    "lundi": {
+      "date": "5/ 09 /2022",
+      "plat": "WATERZOI DE VOLAILLE",
+      "envie": "TOMATE FARCIE",
+      "peche": "FILET DE COLIN AUX HERBES",
+      "premier": "POMMES VAPEUR",
+      "second": "BRUNOISE DE LEGUMES"
+    },
+    "mardi": {
+      "date": "5/ 10 /2022",
+      "plat": "COUSCOUS POULET",
+      "envie": "COUSCOUS MERGUEZ",
+      "peche": "FILET DE CABILLAUD",
+      "premier": "SEMOULE",
+      "second": "LEGUMES COUSCOUS"
+    },
+    "mercredi": {
+      "date": "5/ 11 /2022",
+      "plat": "SAUTE DE PORC AU CURRY",
+      "envie": "KEFTA D'AGNEAU",
+      "peche": "CALAMAR",
+      "premier": "COQUILLETTE",
+      "second": "COURGETTE ROTIE"
+    },
+    "jeudi": {
+      "date": "5/ 12 /2022",
+      "plat": "SAUCISSE DE TOULOUSE",
+      "envie": "ESCALOPE VIENNOISE",
+      "peche": "PECHE DU JOUR",
+      "premier": "PUREE",
+      "second": "HARICOTS VERTS"
+    },
+    "vendredi": {
+      "date": "5/ 13 /2022",
+      "plat": "GOULASH",
+      "envie": "ANDOUILLETTE",
+      "peche": "FILET DE LIEU",
+      "premier": "FRITES",
+      "second": "SALADE VERTE"
+    }
+  },
+  "4": {
+    "lundi": {
+      "date": "5/ 16 /2022",
+      "plat": "POULET BASQUAISE",
+      "envie": "CARBONARA",
+      "peche": "EMIETTE DE POISSON AU GRATIN",
+      "premier": "PENNE",
+      "second": "DUO DE COURGETTES"
+    },
+    "mardi": {
+      "date": "5/ 17 /2022",
+      "plat": "CASSOULET",
+      "peche": "FILET DE HOKI",
+      "premier": "PUREE DE POMMES DE TERRE",
+      "second": "HARICOTS BLANCS"
+    },
+    "mercredi": {
+      "date": "5/ 18 /2022",
+      "plat": "OMELETTE AU FROMAGE",
+      "envie": "JAMBON BRAISE",
+      "peche": "POISSON PANE",
+      "premier": "FRITES",
+      "second": "HARICOTS BEURRES"
+    },
+    "jeudi": {
+      "date": "5/ 19 /2022",
+      "plat": "ECHINE DE PORC A LA MOUTARDE",
+      "envie": "CROQUE MONSIEUR",
+      "peche": "DOS DE COLIN",
+      "premier": "PUREE",
+      "second": "LENTILLES CAROTTES"
+    },
+    "vendredi": {
+      "date": "5/ 20 /2022",
+      "plat": "ESCALOPE DE PORC",
+      "envie": "NEMS",
+      "peche": "FILET DE MERLU",
+      "premier": "RIZ A LA CANTONNAISE"
+    }
+  },
+  "5": {
+    "lundi": {
+      "date": "5/ 23 /2022",
+      "plat": "STEAK HACHE",
+      "envie": "TARTE A L'OIGNON",
+      "peche": "SAUMON",
+      "premier": "MACARONI",
+      "second": "SALSIFIS"
+    },
+    "mardi": {
+      "date": "5/ 24 /2022",
+      "plat": "AIGUILLETTE DE POULET AU CURRY",
+      "envie": "CHOU FARCI",
+      "peche": "POISSON A LA BORDELAISE",
+      "premier": "RIZ JAUNE",
+      "second": "POIVRON ROTI"
+    },
+    "mercredi": {
+      "date": "5/ 25 /2022",
+      "plat": "CHOUCROUTE",
+      "envie": "CREPE FROMAGE",
+      "peche": "PAVE DE POISSON",
+      "premier": "POMMES DE TERRE",
+      "second": "CHOU BLANC"
+    },
+    "jeudi": {
+      "date": "5/ 26 /2022"
+    },
+    "vendredi": {
+      "date": "5/ 27 /2022"
+    }
+  },
+  "6": {
+    "lundi": {
+      "date": "5/ 30 /2022",
+      "plat": "ESCALOPE DE DINDE AUX POIVRONS",
+      "envie": "TARTE TOMATE CHEVRE",
+      "peche": "GRATIN DE POISSON",
+      "premier": "COEUR DE BLE",
+      "second": "CAROTTES"
+    },
+    "mardi": {
+      "date": "5/ 31 /2022",
+      "plat": "LONGE DE PORC MOUTARDE A L'ANCIENNE",
+      "envie": "CHAUSSON BOLOGNAISE",
+      "peche": "MAREE DU JOUR",
+      "premier": "RISETTI",
+      "second": "RATATOUILLE"
+    },
+    "mercredi": {
+      "date": "6/ 01 /2022",
+      "plat": "ROTI DE DINDE AU MAROILLES",
+      "envie": "PAUPIETTE",
+      "peche": "SAUMONETTE AUX CAPRES",
+      "premier": "PUREE DE POMMES DE TERRE",
+      "second": "LEGUMES ROTIS"
+    },
+    "jeudi": {
+      "date": "6/ 02 /2022",
+      "plat": "CARBONADE FLAMANDE",
+      "envie": "ANDOUILLETTE",
+      "peche": "PAUPIETTE DE SAUMON",
+      "premier": "FRITES",
+      "second": "PETITS POIS CAROTTES"
+    },
+    "vendredi": {
+      "date": "6/ 03 /2022",
+      "plat": "PAELLA POULET",
+      "envie": "PAELLA POISSON",
+      "premier": "RIZ JAUNE"
+    }
+  },
+  "7": {
+    "lundi": {
+      "date": "6/ 06 /2022"
+    },
+    "mardi": {
+      "date": "6/ 07 /2022",
+      "plat": "HAUT DE CUISSE DE POULET AUX HERBES",
+      "envie": "MERGUEZ GRILLEE",
+      "peche": "FILET DE HOKI AU PAPRIKA",
+      "premier": "SEMOULE",
+      "second": "LEGUMES COUSCOUS"
+    },
+    "mercredi": {
+      "date": "6/ 08 /2022",
+      "plat": "POIVRON FARCI",
+      "envie": "PALETTE DE PORC A LA DIABLE",
+      "peche": "DOS DE CABILLAUD SAUCE CHAMPIGNON",
+      "second": "RATATOUILLE"
+    },
+    "jeudi": {
+      "date": "6/ 09 /2022",
+      "plat": "BLANQUETTE DE DINDE",
+      "envie": "TORTIS BOLOGNAISE",
+      "peche": "FILET DE LIEU",
+      "premier": "TORTIS"
+    },
+    "vendredi": {
+      "date": "6/ 10 /2022",
+      "plat": "ROTI DE BOEUF SAUCE POIVRE",
+      "envie": "TARTE A L'OIGNON",
+      "peche": "FILET DE COLIN A LA MOUTARDE",
+      "premier": "FRITES",
+      "second": "SALADE VERTE"
+    }
+  }
+}
