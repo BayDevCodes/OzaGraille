@@ -1,84 +1,82 @@
-const fs = require('fs');
+const { IgApiClientMQTT } = require('instagram_mqtt');
+const { existsSync, readFileSync } = require('fs');
+
 module.exports = {
     /**
-     * @param {import("instagram_mqtt").IgApiClientMQTT} client 
-     * @param {Date} date 
+     * @param {IgApiClientMQTT} client
+     * @param {Date} date
      */
-    "post": async (client, date) => {
-        const sunday = new Date();
-        sunday.setHours(12, 0, 50, 0);
-        if (date.getDay() == 0 && (date.getHours() >= 12 && date.getMinutes() > 0)) {
-            sunday.setDate(date.getDate() + (7 - date.getDay()) % 7);
-            console.log(`Post sheduled for next sunday at 12 p.m`);
-        } else {
-            console.log('Post sheduled for today at 12 p.m');
-        };
-        setTimeout(() => {
-            if (fs.existsSync(`./src/assets/renders/posts/${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}.jpeg`)) {
-                global.day1 = fs.readFileSync(`./src/assets/renders/posts/${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}.jpeg`);
-            } else { global.day1 = undefined };
-            if (fs.existsSync(`./src/assets/renders/posts/${date.getDate()}-${date.getMonth() + 2}-${date.getFullYear()}.jpeg`)) {
-                global.day2 = fs.readFileSync(`./src/assets/renders/posts/${date.getDate()}-${date.getMonth() + 2}-${date.getFullYear()}.jpeg`);
-            } else { global.day2 = undefined };
-            if (fs.existsSync(`./src/assets/renders/posts/${date.getDate()}-${date.getMonth() + 3}-${date.getFullYear()}.jpeg`)) {
-                global.day3 = fs.readFileSync(`./src/assets/renders/posts/${date.getDate()}-${date.getMonth() + 3}-${date.getFullYear()}.jpeg`);
-            } else { global.day3 = undefined };
-            if (fs.existsSync(`./src/assets/renders/posts/${date.getDate()}-${date.getMonth() + 4}-${date.getFullYear()}.jpeg`)) {
-                global.day4 = fs.readFileSync(`./src/assets/renders/posts/${date.getDate()}-${date.getMonth() + 4}-${date.getFullYear()}.jpeg`);
-            } else { global.day4 = undefined };
-            if (fs.existsSync(`./src/assets/renders/posts/${date.getDate()}-${date.getMonth() + 5}-${date.getFullYear()}.jpeg`)) {
-                global.day5 = fs.readFileSync(`./src/assets/renders/posts/${date.getDate()}-${date.getMonth() + 5}-${date.getFullYear()}.jpeg`);
-            } else { global.day5 = undefined };
+    post: async (client, date) => {
+        const nextTime = new Date();
+        nextTime.setHours(14, 0, 0, 0);
+        nextTime.setDate(date.getDate() + 7 - date.getDay());
+        if (date.getDay() === 0 && date.getHours() < 14) nextTime.setDate(date.getDate());
 
-            client.publish.album({
-                items: [
-                    { file: day1, width: 1080 },
-                    { file: day2, width: 1080 },
-                    { file: day3, width: 1080 },
-                    { file: day4, width: 1080 },
-                    { file: day5, width: 1080 },
-                ],
-            });
-            console.log(`Post published`)
-        }, sunday.getTime() - date.getTime());
+        const schedulePublication = (delay = 1000 * 3600 * 24 * 7) => {
+            setTimeout(async () => {
+                const today = new Date();
+                const daysToPublish = [];
+
+                for (let i = 1; i < 6; i++) {
+                    if (existsSync(`./src/assets/renders/posts/${today.getMonth() + 1}-${today.getDate() + i}-${today.getFullYear()}.jpeg`)) {
+                        daysToPublish.push({ file: readFileSync(`./src/assets/renders/posts/${today.getMonth() + 1}-${today.getDate() + i}-${today.getFullYear()}.jpeg`) });
+                    };
+                };
+
+                await client.publish.album({ items: daysToPublish }).catch(() => console.log('Less than 2 menus to publish this week'));
+                console.log('Next publication in 7 days');
+                schedulePublication();
+            }, delay)
+        };
+
+        console.log(`Next publication in around ${7 - date.getDay()} day(s)`);
+        schedulePublication(nextTime.valueOf() - date.valueOf());
     },
 
     /**
-     * @param {import("instagram_mqtt").IgApiClientMQTT} client 
+     * @param {IgApiClientMQTT} client 
      * @param {Date} date 
      */
-    "story": async (client, date) => {
-        if (date.getHours() >= 8 && date.getMinutes() > 0) {
-            const tomorrow = new Date();
-            tomorrow.setDate(date.getDate() + 1);
-            if (tomorrow.getDay() == 6) { //Si demain est un samedi
-                tomorrow.setDate(date.getDate() + 3);
-                console.log("Story scheduled for monday (in 3 days)");
-            } else {
-                if (tomorrow.getDay() == 0) { //Si demain est un dimanche
-                    tomorrow.setDate(date.getDate() + 2);
-                    console.log("Story scheduled for monday (in 2 days)");
-                } else {
-                    console.log("Story scheduled for tomorrow");
-                };
-            };
-            tomorrow.setHours(8, 0, 50, 0);
-
-            setTimeout(() => {
-                client.publish.story({ file: fs.readFileSync(`./src/assets/renders/stories/${tomorrow.getDate()}-${tomorrow.getMonth()}-${tomorrow.getFullYear()}.jpeg`) });
-                console.log("Story published");
-            }, tomorrow.getTime() - date.getTime());
-        } else {
-            if (date.getDay() != 6 && date.getDay() != 0) {
-                const later = new Date();
-                later.setDate(date.getDate());
-                later.setHours(8, 0, 50, 0);
-                console.log(`Story scheduled at 8a.m (in ${later.getHours() - date.getHours()} hour(s))`);
-                setTimeout(() => {
-                    client.publish.story({ file: fs.readFileSync(`./src/assets/renders/stories/${later.getDate()}-${later.getMonth()}-${later.getFullYear()}.jpeg`) });
-                    console.log("Story published");
-                }, later.getTime() - date.getTime());
-            };
+    story: async (client, date) => {
+        const nextTime = new Date();
+        nextTime.setHours(8, 0, 0, 0);
+        switch (nextTime.getDay()) {
+            case 5:
+                nextTime.setDate(date.getDate() + 3);
+                break;
+            case 6:
+                nextTime.setDate(date.getDate() + 2);
+                break;
+            default:
+                nextTime.setDate(date.getDate() + 1);
         };
+        if (date.getDay !== 0 && date.getDay !== 6 && date.getHours() < 8) nextTime.setDate(date.getDate());
+
+        const scheduleStory = (delay) => {
+            setTimeout(async () => {
+                const today = new Date();
+
+                if (existsSync(`./src/assets/renders/stories/${today.getMonth() + 1}-${today.getDate()}-${today.getFullYear()}.jpeg`)) {
+                    await client.publish.story({ file: readFileSync(`./src/assets/renders/stories/${today.getMonth() + 1}-${today.getDate()}-${today.getFullYear()}.jpeg`) });
+                };
+
+                switch (today.getDay()) {
+                    case 5:
+                        nextTime.setDate(today.getDate() + 3);
+                        break;
+                    case 6:
+                        nextTime.setDate(today.getDate() + 2);
+                        break;
+                    default:
+                        nextTime.setDate(today.getDate() + 1);
+                };
+
+                console.log(`Next story in ${nextTime.getDate() - today.getDate()} day(s)`);
+                scheduleStory(nextTime.valueOf() - today.valueOf());
+            }, delay);
+        };
+
+        console.log(`Next story in around ${~~((nextTime.valueOf() - date.valueOf()) / 1000 * 3600)} hours`);
+        scheduleStory(nextTime.valueOf() - date.valueOf());
     }
 };
