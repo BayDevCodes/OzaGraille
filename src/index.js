@@ -9,11 +9,15 @@ client.account.login(process.env.IG_USERNAME, process.env.IG_PASSWORD).then(asyn
     console.log(`Logged in as ${user.username}`);
 
     const date = new Date();
-
     scheduled.story(client, date);
     scheduled.post(client, date);
 
-    (await client.feed.accountFollowers().items()).forEach(async account => {
-        await account.checkFollow();
+    client.fbns.on('push', async notif => {
+        if (notif.collapseKey == 'new_follower') {
+            (await client.feed.accountFollowers().items()).forEach(async account => {
+                await account.checkFollow();
+            });
+        };
     });
+    client.fbns.connect();
 });
